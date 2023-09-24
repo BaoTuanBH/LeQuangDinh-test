@@ -58,6 +58,10 @@
     border: 5px solid #43a9c5;
     border-radius: 5px;
   }
+
+  .header-more {
+    display: none;
+  }
 }
 
 /* banner */
@@ -166,7 +170,6 @@
   border: 2px solid rgba(97, 97, 97, 0.336);
   border-radius: 20px;
   width: 450px;
-  height: 350px;
 }
 
 .list-item h2 {
@@ -188,7 +191,7 @@
   padding: 10px;
   line-height: 24px;
   height: 130px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .list-item-about a {
@@ -244,7 +247,6 @@
   border: 2px solid rgba(97, 97, 97, 0.336);
   border-radius: 20px;
   width: 300px;
-  height: 350px;
 }
 
 .list-item-small h2 {
@@ -265,14 +267,11 @@
 /* footer */
 .footer {
   display: flex;
-  gap: 350px;
+  justify-content: space-between;
   background-color: #1489aa;
   height: 300px;
   color: white;
-}
-
-.footer-left {
-  margin-left: 100px;
+  padding: 0 100px;
 }
 
 .footer-left img {
@@ -304,4 +303,228 @@
 
 .footer-right li {
   margin-bottom: 10px;
+}
+
+/* responsive */
+/* average screen (small screen) */
+@media screen and (min-width: 975px) and (max-width: 1270px) {
+  .header {
+    justify-content: space-between;
+    gap: 0px;
+
+    .header-img img {
+      height: 50px;
+    }
+
+    .header-left {
+      gap: 16px;
+      font-size: 16px;
+    }
+
+    .header-right {
+      gap: 8px;
+      font-size: 16px;
+    }
+
+    .header-img {
+      padding: 20px;
+    }
+  }
+
+  .about-item img {
+    display: none;
+  }
+
+  .footer {
+    padding: 0px;
+  }
+}
+
+/* smaller screen */
+@media screen and (min-width: 720px) and (max-width: 975px) {
+  .header {
+    justify-content: space-between;
+    gap: 0px;
+
+    .header-img img {
+      height: 50px;
+    }
+
+    .header-left {
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .header-right {
+      gap: 8px;
+      font-size: 12px;
+      margin-left: 0px;
+    }
+  }
+
+  .about-item img {
+    display: none;
+  }
+
+  .footer {
+    padding: 0px;
+    height: 250px;
+  }
+
+  .footer-left img {
+    height: 250px;
+  }
+
+  .footer-right {
+    width: 400px;
+    overflow-y: scroll;
+  }
+}
+
+/* tablet screen */
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .header {
+    justify-content: space-between;
+    gap: 0px;
+
+    .header-img img {
+      height: 50px;
+    }
+
+    .header-left {
+      display: none;
+    }
+
+    .header-right {
+      gap: 8px;
+      font-size: 12px;
+      margin-left: 0px;
+    }
+
+    .header-more {
+      display: block;
+    }
+
+    .header-more button {
+      color: white;
+      background-color: #1489aa;
+      border: 0px;
+      cursor: pointer;
+    }
+  }
+
+  .about-item img {
+    display: none;
+  }
+
+  .footer {
+    padding: 0px;
+    height: 300px;
+  }
+
+  .footer-left img {
+    height: 170px;
+    margin-top: 50px;
+  }
+
+  .footer-right {
+    width: 250px;
+    gap: 10px;
+  }
+
+  .footer-right li {
+    margin-bottom: 5px;
+  }
+
+  .list-item-info {
+    display: none;
+  }
+
+  .list-more {
+    display: none;
+  }
+
+  .about-h1 {
+    font-size: 20px;
+    width: 200px;
+  }
+}
+
+/* phone screen */
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header {
+    justify-content: space-between;
+    gap: 0px;
+
+    .header-img img {
+      display: none;
+    }
+
+    .header-left {
+      display: none;
+    }
+
+    .header-right {
+      gap: 8px;
+      font-size: 12px;
+      margin-left: 0px;
+    }
+
+    .header-more {
+      display: block;
+    }
+
+    .header-more button {
+      color: white;
+      background-color: #1489aa;
+      border: 0px;
+      cursor: pointer;
+    }
+  }
+
+  .about-item img {
+    display: none;
+  }
+
+  .footer {
+    padding: 0px;
+    height: 350px;
+  }
+
+  .footer-left img {
+    display: none;
+  }
+
+  .footer-right {
+    width: 400px;
+  }
+
+  .list-flex {
+    gap: 10px;
+    justify-content: none;
+  }
+
+  .list-item-info {
+    display: none;
+  }
+
+  .list-more {
+    display: none;
+  }
+
+  .about-h1 {
+    font-size: 20px;
+    width: 200px;
+  }
+
+  .header-text {
+    display: none;
+  }
+  .banner {
+    display: none;
+  }
+
+  #gioi-thieu {
+    margin-top: 50px;
+  }
 }
