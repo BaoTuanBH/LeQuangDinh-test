@@ -10,6 +10,14 @@
 
 /* header */
 
+.something {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding: 50px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -473,13 +481,6 @@
 
     .header-more {
       display: block;
-    }
-
-    .header-more button {
-      color: white;
-      background-color: #1489aa;
-      border: 0px;
-      cursor: pointer;
     }
   }
 
